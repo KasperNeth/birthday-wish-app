@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Subscription</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BIRTHDAY REMINDER FORM</h1>
+        
+        <div class="general-error-container">
+            <p id="general-error"></p>
+        </div>
+        
+        <form id="subscription-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username (at least 5 characters)">
+                <div id="username-error" class="error-message"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+                <div id="email-error" class="error-message"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth">
+                <div id="dob-error" class="error-message"></div>
+            </div>
+            
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="acceptEmails" name="acceptEmails" checked>
+                    <span class="checkmark"></span>
+                    I accept to receive emails from Birthday Reminder
+                </label>
+            </div>
+            
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+    
+    <div id="overlay" class="overlay"></div>
+    
+    <div id="success-popup" class="popup-container">
+        <h2>Success!</h2>
+        <p id="success-message"></p>
+        <button id="close-popup">OK</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
