@@ -121,14 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return null;
         }
         
-        // Format to DD-MM-YYYY
         const day = String(d.getDate()).padStart(2, '0');
         const month = String(d.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
         const year = d.getFullYear();
         
-        return `${day}-${month}-${year}`;
+        return `${year}-${month}-${day}`;
     };
-  
     // Add input event listeners for real-time validation
     usernameInput.addEventListener('input', () => validateUsername(usernameInput.value));
     emailInput.addEventListener('input', () => validateEmail(emailInput.value));
@@ -165,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             console.log('Sending data with formatted date:', formattedDob);
             
-            const response = await fetch('http://localhost:8080/subscribers', {
+            const response = await fetch('http://localhost:8080/api/subscribers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
