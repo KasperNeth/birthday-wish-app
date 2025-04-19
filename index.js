@@ -1,5 +1,5 @@
 const app = require("./app");
-const {connectToMongoDB} = require("./backend/utils/db.connection");
+const {connectToMongoDB} = require("./src/utils/db.connection");
 require('dotenv').config();
 const {initScheduledTasks} = require("./cron.scheduler")
 connectToMongoDB();

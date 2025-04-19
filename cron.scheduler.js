@@ -1,5 +1,5 @@
 const cron = require('node-cron');
-const { birthdayEmailJob } = require("./backend/job/job");
+const { birthdayEmailJob } = require("./src/job/job");
 
 
 
