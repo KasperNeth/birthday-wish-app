@@ -4,7 +4,7 @@ const { birthdayEmailJob } = require("./src/job/job");
 
 
 //schedule a job to run every day 7:00 AM
- cron.schedule('0 7 * * *', async () => {
+ cron.schedule('0 19 * * *', async () => {
     try {
         console.log('🕒 Running birthday email job...');
         await birthdayEmailJob();
