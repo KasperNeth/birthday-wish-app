@@ -8,7 +8,7 @@ const sendMail = async (emailData)=> {
   try {
 
     
-  const emailHtml  = await renderTemplate({username: emailData.username})
+  const emailHtml  = await renderTemplate("birthday",{username: emailData.username})
 
   await transport.sendMail({
     from: process.env.EMAIL_FROM,
