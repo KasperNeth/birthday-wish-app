@@ -2,7 +2,7 @@
 module.exports = (data) => {
   // Default values if not provided in data
   const username = data.username || 'Friend';
-  
+  const birthdayImageUrl = data.imageUrl || "https://res.cloudinary.com/dn0txtslw/image/upload/v1745110096/WhatsApp_Image_2025-04-20_at_1.40.35_AM_jitjpb.jpg"
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ module.exports = (data) => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday ${username}!</title>
   <style>
-    /* Base styles for email client compatibility */
+    /* Base styles for */
     body {
       margin: 0;
       padding: 0;
@@ -28,7 +28,7 @@ module.exports = (data) => {
     }
     
     .header {
-      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      background: linear-gradient(135deg, #333333 0%, #2e7d32  100%);
       padding: 30px 20px;
       text-align: center;
       border-radius: 8px 8px 0 0;
@@ -67,8 +67,7 @@ module.exports = (data) => {
       color: #666666;
       margin-bottom: 30px;
       padding: 15px;
-      background-color: #f9f8f3;
-      border-left: 4px solid #feb47b;
+      background-color: #f9f8f3
     }
     
     .signature {
@@ -95,7 +94,7 @@ module.exports = (data) => {
     .social-links a {
       display: inline-block;
       margin: 0 10px;
-      color: #ff7e5f;
+      color: linear-gradient(135deg, #333333 0%, #2e7d32 100%);
       text-decoration: none;
       font-weight: bold;
     }
@@ -122,7 +121,7 @@ module.exports = (data) => {
     </div>
     
     <div class="content">
-      <img src="https://via.placeholder.com/600x300?text=Birthday+Celebration" alt="Birthday Celebration" class="birthday-image">
+     <img src="${birthdayImageUrl}" alt="Birthday Celebration" class="birthday-image"> 
       
       <div class="message">
         <p>Dear ${username},</p>
@@ -151,7 +150,7 @@ module.exports = (data) => {
         <a href="#">Instagram</a>
         <a href="#">Twitter</a>
       </div>
-      <p>© 2025 Your Company. All rights reserved.</p>
+      <p>© 2025 TheNethService. All rights reserved.</p>
     </div>
   </div>
 </body>
