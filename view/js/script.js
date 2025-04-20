@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             console.log('Sending data with formatted date:', formattedDob);
             
-            const response = await fetch('http://localhost:8080/api/subscribers', {
+            const response = await fetch('/api/subscribers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
