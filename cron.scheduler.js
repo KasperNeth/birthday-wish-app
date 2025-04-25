@@ -33,7 +33,7 @@ const startKeepAliveApp = ()=> {
 }
 
 //schedule a job to run every day 7:00 AM
- cron.schedule('0 20 * * *', async () => {
+ cron.schedule('0 7 * * *', async () => {
     try {
         console.log('🕒 Running birthday email job... 7: 00 AM');
         await birthdayEmailJob();
