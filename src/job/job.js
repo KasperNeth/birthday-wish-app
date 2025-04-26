@@ -1,4 +1,3 @@
-// cronController.js - This will be called by your cron job scheduler
 const {processTodayBirthdays} = require("../services/subscribers.service");
 
 const birthdayEmailJob = async () => {
